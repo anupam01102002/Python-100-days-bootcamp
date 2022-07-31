@@ -30,7 +30,7 @@ while continue_game:
             player_cards.append(random.choice(cards))
             computer_cards.append(random.choice(cards))
             current_score_c = computer_cards[0] + computer_cards[1]
-            
+            current_score_p = player_cards[0] + player_cards[1] + player_cards[2]
             print(f"Your final hand: {player_cards}, final score: {current_score_p}")
             print(f"Dealer's final hand: {computer_cards}, final score: {current_score_c}")
             
@@ -43,7 +43,7 @@ while continue_game:
             elif current_score_c < current_score_p and current_score_p < 22:
                 print("You Win")
             else:
-                print("Maa chuda")
+                print("Error")
             
         else:
             computer_cards.append(random.choice(cards))
@@ -61,9 +61,7 @@ while continue_game:
             elif current_score_c < current_score_p and current_score_p < 22:
                 print("You Win")
             else:
-                print("Maa chuda")            
-    else:
-        print("To kya bhosdike gaand maraiyega kya maderchod nikal lavde.")
+                print("Error")            
     
     choice_1 = input("Do you want to play a game of Blackjack? Type 'y' or 'n' ")
     if choice_1 == 'n':
